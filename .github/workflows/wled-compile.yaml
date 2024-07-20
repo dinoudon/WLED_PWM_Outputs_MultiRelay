@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev.build_flags} -D WLED_ENABLE_PIXART -D USERMOD_MULTI_RELAY -D USERMOD_PWM_OUTPUTS -D WLED_AP_SSID_UNIQUE -D WLED_AP_SSID='"Eximus"' -D WLED_AP_PASS='"1122334455"' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev.build_flags} -D WLED_ENABLE_PIXART -D USERMOD_MULTI_RELAY -D USERMOD_PWM_OUTPUTS -D WLED_AP_SSID_UNIQUE -D WLED_AP_SSID="Eximus" -D WLED_AP_PASS="1122334455"' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
